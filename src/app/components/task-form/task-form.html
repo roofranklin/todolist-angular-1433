@@ -1,1 +1,4 @@
-<p>task-form works!</p>
+<div class="form-container">
+    <input type="text" #taskInput placeholder="Qual a nova tarefa?" />
+    <button (click)="addTask(taskInput.value); taskInput.value = ''">Adicionar</button>
+</div>

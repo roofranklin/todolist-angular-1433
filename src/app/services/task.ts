@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
-
-export interface Task {
+export interface ITask {
   id: number;
   title: string;
   done: boolean;
 }
-
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
-  private tasks: Task[] = [
+  private tasks: ITask[] = [
     { id: 1, title: 'Estudar Angular', done: true },
     { id: 2, title: 'Fazer a atividade da aula', done: false },
     { id: 3, title: 'Tomar um café', done: false },
