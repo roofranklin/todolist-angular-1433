@@ -1,5 +1,5 @@
-@if (task) {
-    <div class="task-item">
-        <p>{{task.title }}</p>
-    </div>
-}
+<div class="task-item" [class.done]="task.done">
+    <input type="checkbox" [checked]="task.done" (change)="onToggle()" />
+    <span class="task-title">{{task.title }}</span>
+</div>
+

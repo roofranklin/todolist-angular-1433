@@ -24,4 +24,9 @@ export class App implements OnInit {
     this.tasks = this.taskService.getTasks(); // Atualiza a lista de pois de adicionar tarefa
   }
 
+  onTaskToggled(taskId: number){
+    this.taskService.toogleTaskDone(taskId);
+    this.tasks = this.taskService.getTasks();
+  }
+
 }
