@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { TaskItem } from '../task-item/task-item';
 import { ITask } from '../../services/task';
 
@@ -10,4 +10,9 @@ import { ITask } from '../../services/task';
 })
 export class TaskList {
   @Input() tasks: ITask[] = [];
+  @Output() taskToggled = new EventEmitter<number>();
+
+  onTaskToggled(taskId: number){
+    this.taskToggled.emit(taskId);
+  }
 }
